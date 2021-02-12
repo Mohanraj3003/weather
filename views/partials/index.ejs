@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+      .icon {
+        background-image: url(http://openweathermap.org/img/wn/<%- response.weather[0].icon -%>@2x.png);
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center"><%= response.name %></h2>
+    <div class="container">
+      <div class="icon"></div>
+      <div class="main">
+        <div>
+          <h1><%= response.weather[0].main%></h1>
+          <p><%= response.weather[0].description%></p>
+        </div>
+      </div>
+      <div class="content">
+        <div class="flex temperature">
+          <div>
+            <h3><%= response.main.temp %></h3>
+            <p>Temperature</p>
+          </div>
+        </div>
+        <div class="flex humidity">
+          <div>
+            <h3><%= response.main.humidity%></h3>
+            <p>Humidity</p>
+          </div>
+        </div>
+        <div class="flex wind">
+          <div>
+            <h3><%= response.wind.speed %></h3>
+            <p>Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="./index.js"></script> -->
+  </body>
+</html>

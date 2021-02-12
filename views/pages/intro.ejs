@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <form>
+      <input type="text" id="txt" placeholder="Enter city name" />
+      <button type="submit" id="btn">Fetch</button>
+    </form>
+
+    <% if(response) {%> <%- include('../partials/index'); %> <% } else {%>
+    <h1>Search you are City...!</h1>
+    <% } %>
+    <script src="./index.js"></script>
+  </body>
+</html>
